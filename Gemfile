@@ -15,6 +15,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'figaro'
 
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -38,6 +40,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'awesome_print'
   gem 'simplecov'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
