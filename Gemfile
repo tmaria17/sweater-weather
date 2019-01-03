@@ -14,6 +14,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'figaro'
+gem 'fast_jsonapi'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -38,6 +41,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'awesome_print'
   gem 'simplecov'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
