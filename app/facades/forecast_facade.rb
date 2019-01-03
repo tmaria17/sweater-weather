@@ -2,9 +2,15 @@ class ForecastFacade
   def initialize(location)
     @location = location
   end
+  
+  def location
+    @location
+  end
+
   def weather_info
     weather_service.get_weather
   end
+
   def current_weather
     weather_info[:currently]
   end
