@@ -4,7 +4,7 @@ class WeatherService
   end
 
   def get_weather
-    get_json("/forecast/#{ENV['DARK_SKY_KEY']}/#{@coordinates[:lat]},#{@coordinates[:lng]}")
+    get_json("/forecast/#{ENV['DARK_SKY_KEY']}/#{@coordinates[:lat]},#{@coordinates[:lng]}?exclude=minutely")
   end
 
   private
