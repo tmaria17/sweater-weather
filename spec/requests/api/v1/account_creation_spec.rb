@@ -13,7 +13,5 @@ describe 'account creation'do
     user_results = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.status).to eq(200)
-
-
   end
 end
