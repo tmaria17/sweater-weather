@@ -15,6 +15,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'figaro'
 gem 'fast_jsonapi'
+gem 'bcrypt', '~> 3.1.7'
+
 
 
 
