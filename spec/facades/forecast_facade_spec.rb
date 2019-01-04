@@ -11,11 +11,10 @@ describe ForecastFacade do
     VCR.use_cassette("weather_facade") do
       forecast = ForecastFacade.new("Denver,CO")
 
-      expect(forecast.current_weather).to have_key(:summary)
-      expect(forecast.current_weather[:precipProbability]).to eq(0)
+      expect(forecast.current_weather.class).to eq(CurrentWeather)
     end
   end
-  it 'returns daily weather summary' do
+  xit 'returns daily weather summary' do
     VCR.use_cassette("weather_facade_1") do
 
       forecast = ForecastFacade.new("Denver, CO")
@@ -30,12 +29,12 @@ describe ForecastFacade do
     VCR.use_cassette("weather_facade_1") do
 
       forecast = ForecastFacade.new("Denver, CO")
-
-      expect(forecast.daily_weather[0]).to have_key(:time)
+      # binding.pry
+      expect(forecast.daily_weather[0]).to be_an_instance_of(DailyWeather)
     end
   end
 
-  it 'returns hourly weather summary' do
+  xit 'returns hourly weather summary' do
     VCR.use_cassette("weather_facade_2") do
 
       forecast = ForecastFacade.new("Denver, CO")
@@ -50,7 +49,7 @@ describe ForecastFacade do
 
       forecast = ForecastFacade.new("Denver, CO")
 
-      expect(forecast.hourly_weather[0]).to have_key(:windGust)
+      expect(forecast.hourly_weather[0]).to be_an_instance_of(HourlyWeather)
     end
   end
 end
