@@ -1,4 +1,3 @@
-
 class DailyWeather
   attr_reader :icon,
               :temp_high,
