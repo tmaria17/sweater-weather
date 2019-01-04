@@ -1,0 +1,2 @@
+class Gif
+end
