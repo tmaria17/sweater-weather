@@ -9,15 +9,15 @@ class CurrentWeather
               :uv_index,
               :id
 
-  def initialize(weather_hash)
+  def initialize(current_data)
     @id = id
-    @time = weather_hash[:time]
-    @summary = weather_hash[:summary]
-    @icon = weather_hash[:icon]
-    @temperature = weather_hash[:temperature]
-    @feels_like = weather_hash[:apparentTemperature]
-    @humidity = weather_hash[:humidity]
-    @visibility = weather_hash[:visibility]
-    @uv_index = weather_hash[:uvIndex]
+    @time = current_data[:time]
+    @summary = current_data[:summary]
+    @icon = current_data[:icon]
+    @temperature = current_data[:temperature]
+    @feels_like = current_data[:apparentTemperature]
+    @humidity = current_data[:humidity]
+    @visibility = current_data[:visibility]
+    @uv_index = current_data[:uvIndex]
   end
 end
