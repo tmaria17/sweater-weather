@@ -7,6 +7,10 @@ class GifService
     get_json("/v1/gifs/search?&q=#{@search}&limit=1&offset=0&rating=G&lang=en")
   end
 
+  def get_url
+    get_gif_data[:data][0][:url]
+  end
+
   private
 
   def conn

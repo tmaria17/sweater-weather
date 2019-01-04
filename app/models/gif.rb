@@ -3,7 +3,7 @@ class Gif
   def initialize(time, summary , url)
     @time = time
     @summary = summary
-    @link = url
+    @url = url
     @id = id
   end
 end
