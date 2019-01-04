@@ -6,6 +6,6 @@ class Api::V1::GifsController < ApplicationController
       Gif.new(data.time, data.icon, gif_service.get_gif_data[:data][0][:url])
     end
 
-    render json: gifs
+    render json: GifSerializer.new(gifs)
   end
 end
