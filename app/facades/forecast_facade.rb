@@ -23,13 +23,6 @@ class ForecastFacade
       DailyWeather.new(data)
     end.take(5)
   end
-  def daily_weather_summary
-    weather_info[:daily]
-  end
-  def hourly_weather_summary
-    weather_info[:hourly]
-  end
-
   private
     def coord_service
       CoordinateService.new(@location)
