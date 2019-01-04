@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'GIPHY API' do
-  it 'returns gifs based on location weather' do
+  xit 'returns gifs based on location weather' do
     get '/api/v1/gifs?location=denver,co'
 
 
