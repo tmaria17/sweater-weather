@@ -4,11 +4,11 @@ class HourlyWeather
               :icon,
               :temperature,
               :summary
-  def initialize(data)
+  def initialize(hourly_data)
     @id          = id
-    @time        = DateTime.strptime(data[:time].to_s, '%s')
-    @icon        = data[:icon]
-    @summary     = data[:summary]
-    @temperature = data[:temperature]
+    @time        = DateTime.strptime(hourly_data[:time].to_s, '%s')
+    @icon        = hourly_data[:icon]
+    @summary     = hourly_data[:summary]
+    @temperature = hourly_data[:temperature]
   end
 end
