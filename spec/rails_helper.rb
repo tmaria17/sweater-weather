@@ -1,6 +1,12 @@
 require 'spec_helper'
 require 'vcr'
 require 'webmock/rspec'
+require 'database_cleaner'
+
+# DatabaseCleaner.strategy = :truncation
+
+# then, whenever you need to clean the DB
+# DatabaseCleaner.clean
 
 VCR.configure do |config|
   config.ignore_localhost = true
@@ -69,12 +75,16 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  config.before :each do
-    DatabaseCleaner.clean
-  end
-  config.after :each do
-    DatabaseCleaner.clean
-  end
+  config.before(:suite) do
+        DatabaseCleaner.strategy = :transaction
+        DatabaseCleaner.clean_with(:truncation)
+      end
+
+      config.around(:each) do |example|
+        DatabaseCleaner.cleaning do
+          example.run
+        end
+    end
 end
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
