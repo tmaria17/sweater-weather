@@ -2,35 +2,27 @@ class ForecastFacade
   def initialize(location)
     @location = location
   end
-  
+
   def location
     @location
   end
 
-  def weather_info
-    weather_service.get_weather
-  end
-
   def current_weather
-    weather_info[:currently]
-  end
-
-  def daily_weather_summary
-    weather_info[:daily]
-  end
-
-  def daily_weather
-    weather_info[:daily][:data]
-  end
-
-  def hourly_weather_summary
-    weather_info[:hourly]
+    CurrentWeather.new(weather_service.current_weather_data)
   end
 
   def hourly_weather
-    weather_info[:hourly][:data]
+    # binding.pry
+    weather_service.hourly_weather_data.map do |data|
+      HourlyWeather.new(data)
+    end.take(12)
   end
 
+  def daily_weather
+    weather_service.daily_weather_data.map do |data|
+      DailyWeather.new(data)
+    end.take(5)
+  end
   private
     def coord_service
       CoordinateService.new(@location)

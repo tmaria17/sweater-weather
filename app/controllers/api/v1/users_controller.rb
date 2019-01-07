@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
     user = User.create(strong_params)
     user[:api_key] = user.user_key
