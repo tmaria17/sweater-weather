@@ -6,7 +6,7 @@ class DailyWeather
               :chance_of_rain,
               :id,
               :summary
-
+              #use icon for a better gif search
   def initialize(daily_data)
     @id = id
     @summary = daily_data[:summary]
