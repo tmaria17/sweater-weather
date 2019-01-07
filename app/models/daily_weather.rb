@@ -4,7 +4,8 @@ class DailyWeather
               :temp_low,
               :time,
               :chance_of_rain,
-              :id
+              :id,
+              :summary
 
   def initialize(daily_data)
     @id = id

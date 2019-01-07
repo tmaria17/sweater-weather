@@ -6,4 +6,8 @@ class Gif
     @url = url
     @id = id
   end
+
+  def copyright
+    Time.new.year.to_s
+  end
 end

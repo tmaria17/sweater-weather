@@ -4,10 +4,13 @@ class GifService
   end
 
   def get_gif_data
-    get_json("/v1/gifs/search?&q=#{@search}&limit=1&offset=0&rating=G&lang=en")
+    get_json("/v1/gifs/search?&q=#{@search}&limit=1")
   end
 
   def get_url
+    # get_gif_data[:data].map do |gif_data|
+    #   gif_data[:url]
+    # end
     get_gif_data[:data][0][:url]
   end
 

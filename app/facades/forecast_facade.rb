@@ -12,7 +12,6 @@ class ForecastFacade
   end
 
   def hourly_weather
-    # binding.pry
     weather_service.hourly_weather_data.map do |data|
       HourlyWeather.new(data)
     end.take(12)
@@ -23,12 +22,14 @@ class ForecastFacade
       DailyWeather.new(data)
     end.take(5)
   end
-  private
-    def coord_service
-      CoordinateService.new(@location)
-    end
 
-    def weather_service
-      WeatherService.new(coord_service.get_coordinates)
-    end
+  private
+  
+  def coord_service
+    CoordinateService.new(@location)
+  end
+
+  def weather_service
+    WeatherService.new(coord_service.get_coordinates)
+  end
 end
