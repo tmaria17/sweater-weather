@@ -1,9 +1,13 @@
 class User < ApplicationRecord
+  after_save :user_key
   validates_presence_of :email, :password
-  # validates_uniqueness_of :email
   has_secure_password
 
   def user_key
-    SecureRandom.urlsafe_base64
+    if api_key.nil?
+      update(api_key: SecureRandom.urlsafe_base64)
+    else
+     SecureRandom.urlsafe_base64
+   end
   end
 end
