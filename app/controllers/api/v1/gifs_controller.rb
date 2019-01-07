@@ -6,7 +6,7 @@ class Api::V1::GifsController < ApplicationController
       gif_service = GifService.new(data.icon)
       Gif.new(data.time, data.summary, gif_service.get_url)
     end
-    
+
     render json: GifSerializer.new(gifs)
   end
 end
