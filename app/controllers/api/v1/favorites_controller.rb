@@ -11,6 +11,11 @@ class Api::V1::FavoritesController < ApplicationController
     render json: FavoriteSerializer.new(favorites)
   end
 
+  def destroy
+    favorites = user.favorites
+    favorites.find_by(location: params[:location]).delete
+  end
+
   private
 
   def user

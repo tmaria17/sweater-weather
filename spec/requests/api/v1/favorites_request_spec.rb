@@ -14,7 +14,7 @@ describe 'Favorite request post' do
 
     expect(response).to be_successful
     expect(result[:data][:attributes][:location]).to eq("New York, NY")
-    expect(result[:data][:id]).to eq("1")
+    expect(result[:data][:id]).to eq("3")
   end
   it 'does not create an favorite if api key is nil' do
     user = User.create(email: 'ABurr@president.com', password: 'Hamilton', password_confirmation: 'Hamilton')
