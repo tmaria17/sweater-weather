@@ -1,4 +1,5 @@
 # Sweater Weather
+<a href="https://codeclimate.com/github/tmaria17/sweater-weather/maintainability"><img src="https://api.codeclimate.com/v1/badges/5f84aa2525d9e33a9b7f/maintainability" /></a>
 Final solo project for Module 3 of Turing's Back-End Engineering program
 
 # Prerequisites/ Dependencies
