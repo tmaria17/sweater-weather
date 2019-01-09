@@ -12,11 +12,10 @@ describe 'Favorite request post' do
 
     post '/api/v1/favorites/', params: favorite_params
 
-    data = JSON.parse(response.body, symbolize_names: true)
+    result = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
-    expect(data[:data][:attributes][:location]).to eq("New York, NY")
-    expect(data[:data][:id]).to eq("1")
-    expect(data[:data][:attributes][:user_id]).to eq(user.id)
+    expect(result[:data][:attributes][:location]).to eq("New York, NY")
+    expect(result[:data][:id]).to eq("1")
   end
 end
