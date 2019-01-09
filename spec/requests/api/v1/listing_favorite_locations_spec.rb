@@ -8,8 +8,6 @@ describe 'Get Favorites' do
                 'api_key': "#{user.api_key}"
               }
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
     get '/api/v1/favorites/', params: favorite_params
     results = JSON.parse(response.body, symbolize_names: true)
 

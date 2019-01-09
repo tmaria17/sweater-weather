@@ -8,8 +8,6 @@ describe 'Favorite request post' do
                 'api_key': "#{user.api_key}"
               }
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
     post '/api/v1/favorites/', params: favorite_params
 
     result = JSON.parse(response.body, symbolize_names: true)
