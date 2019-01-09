@@ -11,9 +11,7 @@ describe 'login' do
     user = User.create!(user_info)
 
     post '/api/v1/sessions/', params: user_info
-
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
+    
     data = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.status).to eq(200)

@@ -8,8 +8,6 @@ describe 'Favorite request post' do
                 'api_key': "#{user.api_key}"
               }
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
     post '/api/v1/favorites/', params: favorite_params
 
     result = JSON.parse(response.body, symbolize_names: true)
@@ -17,5 +15,19 @@ describe 'Favorite request post' do
     expect(response).to be_successful
     expect(result[:data][:attributes][:location]).to eq("New York, NY")
     expect(result[:data][:id]).to eq("1")
+  end
+  it 'does not create an favorite if api key is nil' do
+    user = User.create(email: 'ABurr@president.com', password: 'Hamilton', password_confirmation: 'Hamilton')
+    favorite_params =  {
+                'location': 'New York, NY',
+                'api_key': nil
+              }
+
+    post '/api/v1/favorites/', params: favorite_params
+
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(response.body).to eq("Unauthorized")
   end
 end
