@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-  validates_presence_of :location, uniqueness: true
+  validates_presence_of :location
   belongs_to :user
 
   def current_weather

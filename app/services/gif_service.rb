@@ -8,9 +8,6 @@ class GifService
   end
 
   def get_url
-    # get_gif_data[:data].map do |gif_data|
-    #   gif_data[:url]
-    # end
     get_gif_data[:data][0][:url]
   end
 
