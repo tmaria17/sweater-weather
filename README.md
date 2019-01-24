@@ -5,10 +5,9 @@ Final solo project for Module 3 of Turing's Back-End Engineering program. This i
 
 Checkout the frontend application (WIP) here: https://github.com/tmaria17/sweater-weather-fe
 # Heroku Link
+This displays the forecast endpoint:
 https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=Denver,CO
 
-#Forecast Information 
-GET https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=Denver,CO
 
 
 # Prerequisites/ Dependencies
