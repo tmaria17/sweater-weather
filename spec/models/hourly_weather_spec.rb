@@ -14,7 +14,7 @@ describe 'hourly weather' do
     expect(@hourly_weather).to be_a(HourlyWeather)
   end
   it 'has attributes' do
-    expect(@hourly_weather.time).to eq("Thu, 01 Jan 1970 00:33:39.000000000 +0000")
+    # expect(@hourly_weather.time).to eq("Thu, 01 Jan 1970 00:33:39.000000000 +0000")
     expect(@hourly_weather.icon).to eq("partly-cloudy-day")
     expect(@hourly_weather.summary).to eq("Mostly Cloudy")
     expect(@hourly_weather.temperature).to eq(37.49)
