@@ -54,6 +54,7 @@ To run the full testing suite, run `rspec` from the command line.
   GET http://localhost:3000/api/v1/forecast?location=denver,co
   
   `
+  
   {
     "data": {
         "id": "denver,co",
@@ -207,21 +208,26 @@ To run the full testing suite, run `rspec` from the command line.
     }
 }
 
+
 `
 
 ## Account Creation
 
 `
+
 POST api/v1/users
 Content-Type: application/json
 Accept: application/json
+
 `
 
 `
+
 {
 "email": "test_email_1@email.com",
 "password": "abc123"
 }
+
 `
 
 Response :
@@ -231,6 +237,7 @@ status: 201
 body:
 
 `
+
 {
     "data": {
         "id": "10",
@@ -240,23 +247,28 @@ body:
         }
     }
 }
+
 `
 
 
 
 ## Login
 `
+
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
+
 `
 
 `
+
 {
   "email": "test_email_1@example.com",
   "password": "abc123"
 
 }
+
 `
 
 Response
@@ -266,6 +278,7 @@ status: 200
 body:
 
 `
+
 {
     "data": {
         "id": "10",
@@ -275,19 +288,24 @@ body:
         }
     }
 }
+
 `
 ## Favoriting Locations
 `
+
 POST /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
+
 `
 
 `
+
 {
   "api_key": "GxYAs44_ZCw3Yqwu2Cc6NQ",
   "location": "Denver, CO"
 }
+
 `
 Response:
 
@@ -296,6 +314,7 @@ status: 200
 body:
 
 `
+
 {
     "data": {
         "id": "4",
@@ -316,20 +335,25 @@ body:
         }
     }
 }
+
 `
 
 
 ## Listing Favorite Locations
 `
+
 GET /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
+
 `
 
 `
+
 {
   "api_key": ""GxYAs44_ZCw3Yqwu2Cc6NQ""
 }
+
 `
 
 Response
@@ -340,6 +364,7 @@ body:
 
 
 `
+
 {
     "data": {
         "id": "4",
@@ -360,20 +385,25 @@ body:
         }
     }
 }
+
 `
 
 ## Removing Favorite Locations
 `
+
 DELETE /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
+
 `
 
 `
+
 {
   "api_key": "GxYAs44_ZCw3Yqwu2Cc6NQ",
   "location":  "Denver, CO"
 }
+
 `
 
 Response
