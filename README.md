@@ -205,6 +205,7 @@ To run the full testing suite, run `rspec` from the command line.
         }
     }
 }
+
 `
 
 ## Account Creation
@@ -223,8 +224,11 @@ Accept: application/json
 `
 
 Response :
+
 status: 201
+
 body:
+
 `
 {
     "data": {
@@ -255,8 +259,11 @@ Accept: application/json
 `
 
 Response
+
 status: 200
+
 body:
+
 `
 {
     "data": {
@@ -281,7 +288,9 @@ Accept: application/json
 }
 `
 Response:
+
 status: 200
+
 body:
 
 `
@@ -322,7 +331,9 @@ Accept: application/json
 `
 
 Response
+
 status: 200
+
 body:
 
 
