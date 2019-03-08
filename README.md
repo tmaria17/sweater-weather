@@ -210,11 +210,11 @@ To run the full testing suite, run `rspec` from the command line.
 `
 
 ## Account Creation
+
 `
 POST api/v1/users
 Content-Type: application/json
 Accept: application/json
-
 `
 
 `
