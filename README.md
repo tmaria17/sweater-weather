@@ -1,9 +1,9 @@
 # Sweater Weather
 <a href="https://codeclimate.com/github/tmaria17/sweater-weather/maintainability"><img src="https://api.codeclimate.com/v1/badges/5f84aa2525d9e33a9b7f/maintainability" /></a>
 <br>
-Final solo project for Module 3 of Turing's Back-End Engineering program. This is a backend api endpoint application that will power a sperate front end application. This app consumes the Google Geocode API, Dark Sky API, and Giphy API. This app has endpoints for: Forecast for a City, Account Creation, Logging in, Creating a Favorite City, Listing Favorites, and Deleting a Favorite, Weather based GIFs. 
+Final solo project for Module 3 of Turing's Back-End Engineering program. This is a backend api endpoint application that will power a sperate front end application written in JavaScript. This app consumes the Google Geocode API, Dark Sky API, and Giphy API. This app has endpoints for: Forecast for a City, Account Creation, Logging in, Creating a Favorite City, Listing Favorites, and Deleting a Favorite, Weather based GIFs. 
 
-Checkout the frontend application (WIP) here: https://github.com/tmaria17/sweater-weather-fe
+Checkout the frontend application here: https://github.com/tmaria17/sweater-weather-fe
 # Heroku Link
 This displays the forecast endpoint:
 https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=Denver,CO
