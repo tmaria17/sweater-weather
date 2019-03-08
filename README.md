@@ -213,22 +213,22 @@ To run the full testing suite, run `rspec` from the command line.
 
 ## Account Creation
 
-`
+```
 
 POST api/v1/users
 Content-Type: application/json
 Accept: application/json
 
-`
+```
 
-`
+```
 
 {
 "email": "test_email_1@email.com",
 "password": "abc123"
 }
 
-`
+```
 
 Response :
 
@@ -236,7 +236,7 @@ status: 201
 
 body:
 
-`
+```
 
 {
     "data": {
@@ -248,20 +248,21 @@ body:
     }
 }
 
-`
+```
 
 
 
 ## Login
-`
+
+```
 
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
 
-`
+```
 
-`
+```
 
 {
   "email": "test_email_1@example.com",
@@ -269,7 +270,7 @@ Accept: application/json
 
 }
 
-`
+```
 
 Response
 
@@ -277,7 +278,7 @@ status: 200
 
 body:
 
-`
+```
 
 {
     "data": {
@@ -289,31 +290,32 @@ body:
     }
 }
 
-`
+```
+
 ## Favoriting Locations
-`
+```
 
 POST /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
 
-`
+```
 
-`
+```
 
 {
   "api_key": "GxYAs44_ZCw3Yqwu2Cc6NQ",
   "location": "Denver, CO"
 }
 
-`
+```
 Response:
 
 status: 200
 
 body:
 
-`
+```
 
 {
     "data": {
@@ -336,25 +338,25 @@ body:
     }
 }
 
-`
+```
 
 
 ## Listing Favorite Locations
-`
+```
 
 GET /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
 
-`
+```
 
-`
+```
 
 {
   "api_key": ""GxYAs44_ZCw3Yqwu2Cc6NQ""
 }
 
-`
+```
 
 Response
 
@@ -363,7 +365,7 @@ status: 200
 body:
 
 
-`
+```
 
 {
     "data": {
@@ -386,25 +388,25 @@ body:
     }
 }
 
-`
+```
 
 ## Removing Favorite Locations
-`
+```
 
 DELETE /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
 
-`
+```
 
-`
+```
 
 {
   "api_key": "GxYAs44_ZCw3Yqwu2Cc6NQ",
   "location":  "Denver, CO"
 }
 
-`
+```
 
 Response
 
