@@ -282,6 +282,7 @@ POST /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
 `
+
 `
 {
   "api_key": "GxYAs44_ZCw3Yqwu2Cc6NQ",
