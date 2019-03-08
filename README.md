@@ -52,6 +52,7 @@ To run the full testing suite, run `rspec` from the command line.
 
 ## Current Weather
   GET http://localhost:3000/api/v1/forecast?location=denver,co
+  
   `
   {
     "data": {
@@ -373,7 +374,9 @@ Accept: application/json
   "location":  "Denver, CO"
 }
 `
+
 Response
+
 status: 200
 
 
