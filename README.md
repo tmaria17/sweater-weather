@@ -205,7 +205,7 @@ To run the full testing suite, run `rspec` from the command line.
         }
     }
 }
-  `
+`
 
 ## Account Creation
 `
@@ -214,11 +214,12 @@ Content-Type: application/json
 Accept: application/json
 
 `
+
+`
 {
 "email": "test_email_1@email.com",
 "password": "abc123"
 }
-
 `
 
 Response :
@@ -266,7 +267,7 @@ body:
         }
     }
 }
-
+`
 ## Favoriting Locations
 `
 POST /api/v1/favorites
@@ -319,10 +320,12 @@ Accept: application/json
   "api_key": ""GxYAs44_ZCw3Yqwu2Cc6NQ""
 }
 `
+
 Response
 status: 200
 body:
-`
+
+
 `
 {
     "data": {
@@ -344,7 +347,6 @@ body:
         }
     }
 }
-`
 `
 
 ## Removing Favorite Locations
