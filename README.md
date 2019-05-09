@@ -51,7 +51,7 @@ https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=Denver,CO
 To run the full testing suite, run `rspec` from the command line.
 
 ## Current Weather
-  GET http://localhost:3000/api/v1/forecast?location=denver,co
+  GET https://safe-reaches-47529.herokuapp.com/api/v1/forecast?location=Denver,CO
   
   ```
   
